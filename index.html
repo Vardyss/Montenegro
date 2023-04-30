@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montenegro - movie app</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/script/script.js" defer></script>
+</head>
+<body>
+<header>
+    <img src="/img/Montenegro.png" alt="logo">
+    <button type="button" class="favorites-menu">❤️</button>
+    <form class="form">
+        <input type="text" class="search" placeholder="search">
+    </form>
+</header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="icon">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </button>
+            <p class="sidebar__header">Choose your genre</p>
+            <ul class="genres-list"></ul>
+        </aside>
+
+        <div class="content">
+            <p class="pagination-page-number" style="display: none;">Page <span></span>12 of 500</p>
+            <main class="main">
+                <ul class="movies-list">
+
+                </ul>
+            </main>
+
+            <div class="pagination">
+            </div>
+        </div>        
+        <div class="black-background">
+        </div>
+        <div class="added-favorites">
+            <ul class="added-favorites-movies">
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
