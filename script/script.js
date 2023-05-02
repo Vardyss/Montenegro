@@ -88,7 +88,7 @@ function renderMovies(container, data) {
             <span class="rating ${getRatingColor(data.vote_average)}">${data.vote_average}</span>
         </div>
         <div class="movie__overview">
-            <button type="button" class="movie__btn">${container === favoriteContainer ? "❤️" : "🤍"}</button>
+            <button type="button" class="movie__btn" data-film="${data.title}">${container === favoriteContainer ? "❤️" : "🤍"}</button>
             <p class="movie__overview-title">Overview</p>
             <p>${data.overview}</p>
         </div>
@@ -186,6 +186,10 @@ favoriteContainer.addEventListener('click', function(e) {
         const movieTitle = e.target.closest('.movie__overview').previousElementSibling.firstElementChild.textContent;
         removeMovie(movieTitle);
 
+        // Change heart in main container
+        const allMovies = document.querySelectorAll('.movie__btn');
+        Array.from(allMovies).find(n => n.dataset.film === movieTitle).innerText = "🤍";
+        
         // Rerender list of favorites
         favoriteContainer.innerHTML = '';
         favoriteMoviesarr.forEach(data => renderMovies(favoriteContainer, data));

@@ -466,7 +466,10 @@ h3 {
       position: absolute;
       bottom: 7px;
     }
-
+    .movie__btn {
+      right: 5%;
+      top: 3%;
+    }
   }
   @media(max-width:700px) {
     header {
@@ -520,6 +523,10 @@ h3 {
     .container.with-favorites.with-favorites .added-favorites {
       width: 100%;
     }
+    .movie__btn {
+      top: 0;
+      right: 2%;
+    }
   }
   
   @media(max-width:400px) {
@@ -529,5 +536,9 @@ h3 {
     }
     .movies-list {
       grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+    }
+    .movie__btn {
+      top: 0;
+      right: 0%;
     }
   }
